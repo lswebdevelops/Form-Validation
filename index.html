@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Form Validation</h1>
-    <form>
+    <form novalidate>
         <p>
           <fieldset>
             <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
@@ -45,9 +45,17 @@
           </datalist>
         </p>
         <p>
-          <label for="t2">What's your email address?</label>
-          <input placeholder="type your email" type="email" id="t2" name="email">
-        </p>
+            <label for="mail">
+              <span>Please enter an email address:</span>
+              <input
+               type="email"
+                id="mail" 
+                name="mail" 
+                required 
+                minlength="8" />
+              <span class="error" aria-live="polite"></span>
+            </label>
+          </p>
         <p>
           <label for="t3">Leave a short message</label>
           <textarea placeholder="type a message here" id="t3" name="msg" maxlength="140" rows="5"></textarea>
