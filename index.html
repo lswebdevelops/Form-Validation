@@ -10,5 +10,10 @@
 </head>
 <body>
     <h1>Form Validation</h1>
+    <form>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input id="choose" required name="i_like" pattern="[Bb]anana|[Cc]herry" minlength="6" maxlength="6"/>
+        <button>Submit</button>
+      </form>
 </body>
 </html>
